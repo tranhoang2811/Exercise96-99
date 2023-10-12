@@ -1,0 +1,51 @@
+<div class="container">
+    <form [formGroup]="calculateForm">
+        <table border="1">
+            <tr>
+                <td style="text-align: center;">a:</td>
+                <td>
+                    <input type="text" id="a" formControlName="a">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">b:</td>
+                <td>
+                    <input type="text" id="b" formControlName="b">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">c:</td>
+                <td>
+                    <input type="text" id="c" formControlName="c">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">Result</td>
+                <td>
+                    <p>
+                        {{ result }}
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td [attr.colspan]="2" class="group-button">
+                    <button (click)="findMax()">
+                        MAX
+                    </button>
+                    <button (click)="findMin()">
+                        MIN
+                    </button>
+                    <button (click)="sinA()">
+                        sin(a)
+                    </button>
+                    <button (click)="cosA()">
+                        cos(a)
+                    </button>
+                    <button (click)="aPowB()">
+                        a^b
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>

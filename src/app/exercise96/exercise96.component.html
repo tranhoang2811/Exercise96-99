@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="modal">
+        <header>
+            <h1>
+                Login to the Teacher
+            </h1>
+        </header>
+        <hr>
+        <main>
+            <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+                <div class="image-container">
+                    <img src="../../assets/images/coca-cola.jpeg">
+                </div>
+                <div class="form-content">
+                    <div>
+                        <input type="email" formControlName="email" placeholder="Email">
+                        <div class="error"
+                            *ngIf="loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched)">
+                            This field is required
+                        </div>
+                    </div>
+                    <div>
+                        <input type="password" formControlName="password" placeholder="Password">
+                        <div class="error" *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)">
+                            This field is required
+                        </div>
+                    </div>
+                    <div class="remember-me-container">
+                        <input type="checkbox" formControlName="rememberMe" id="rememberMe">
+                        <label for="rememberMe">
+                            Remember Me
+                        </label>
+                    </div>
+                    <button type="submit">
+                        Log in
+                    </button>
+                    <div *ngIf="isSubmitting">
+                        {{ loginForm.value | json }}
+                    </div>
+                </div>
+            </form>
+        </main>
+        <hr class="bottom-line">
+    </div>
+</div>

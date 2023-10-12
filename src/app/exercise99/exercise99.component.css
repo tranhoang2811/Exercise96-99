@@ -1,0 +1,8 @@
+table {
+    width: 300px;
+}
+
+.group-button {
+    display: flex;
+    column-gap: 8px;
+}

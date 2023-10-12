@@ -1,0 +1,83 @@
+input {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container h2 {
+    font-weight: 500;
+    text-align: center;
+}
+
+.container .modal {
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+.modal label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+select {
+    width: 100%;
+    height: 32px;
+    padding: 8px;
+}
+
+
+.shift-select {
+    display: flex;
+    column-gap: 12px;
+    align-items: center;
+}
+
+.shift-select .radio-item {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+}
+
+button {
+    width: 20%;
+    background-color: rgb(74, 123, 191);
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    padding: 8px;
+}
+
+.error {
+    color: red;
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+.invalid,
+.invalid-agreement-checkbox {
+    border-color: red !important;
+}
+
+.invalid-agreement-checkbox {
+    box-shadow: 0 0 5px 1px red;
+}
+
+.invalid-agreement-text {
+    outline: none;
+    color: red;
+}
